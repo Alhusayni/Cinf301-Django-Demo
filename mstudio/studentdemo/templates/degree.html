@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% for i in deg %}
+    <title>degree of {{ i.student_id.first_name }} {{ i.student_id.last_name }}</title>
+    {% endfor %}
+</head>
+<body>
+
+{% for i in deg %}
+    <h2>{{ i.student_id.first_name }} {{ i.student_id.last_name }}</h2>
+    <h2>{{ i.student_degree }}</h2>
+{% endfor %}
+
+</body>
+</html>

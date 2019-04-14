@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+</head>
+<body>
+
+<h1>List of student {{ ssd }} </h1>
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Fname</th>
+        <th>Lname</th>
+        <th>Age</th>
+        <th>Birth</th>
+    </thead>
+    <tbody>
+    {% for st in stu %}
+        <tr>
+            <td> {{ st.id  }}</td>
+            <td> <a href="/degree/{{ st.id }}"> {{ st.first_name }} </a></td>
+            <td> {{ st.last_name }}</td>
+            <td> {{ st.age }}</td>
+            <td> {{ st.birth }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+
+</table>
+</body>
+</html>
