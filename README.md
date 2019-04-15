@@ -14,12 +14,12 @@ After installing Python3, Go to the CMD and write this command:
 pip install django
 ```
 
-Then you are good to go.
+
 
 ### Creating a project:
 
 
-To start a project use the command line and go to your working directory and write this command: 
+To start a project use the commandline and go to your working directory and write this command: 
 ```
 django-admin startproject <projectname> 
 ```
