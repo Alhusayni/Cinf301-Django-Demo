@@ -18,12 +18,16 @@ from django.urls import path
 from studentdemo.views import index
 from studentdemo.views import student
 from studentdemo.views import degree
+from studentdemo.views import httres
+from studentdemo.views import register
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index'),
-    path('student/', student, name='student'),
+    path('test/', index, name='index'),
+    path('', student, name='student'),
     path('degree/<str:student_id>/', degree, name='degree'),
+    path('httres/',httres, name='http' ),
+    path('register/',register, name='register' )
 
 ]

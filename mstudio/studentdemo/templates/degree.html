@@ -1,17 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    {% for i in deg %}
-    <title>degree of {{ i.student_id.first_name }} {{ i.student_id.last_name }}</title>
-    {% endfor %}
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}
 
+    Degrees of {{name.first_name }} {{ name.last_name }}
+
+{% endblock %}
+
+
+
+
+
+{% block content %}
+<div class="jumbotron">
+    <h2>Degrees of {{name.first_name }} {{ name.last_name }} :</h2>
+<br>
+
+<ul class="list-group">
 {% for i in deg %}
-    <h2>{{ i.student_id.first_name }} {{ i.student_id.last_name }}</h2>
-    <h2>{{ i.student_degree }}</h2>
+    <li class="list-group-item">{{ i.student_degree }}</li>
 {% endfor %}
 
-</body>
-</html>
+</ul>
+
+<br>
+<button type="button" class="btn btn-dark" data-toggle="collapse" data-target="#demo">
+    Click to add new degree</button>
+
+    <div id="demo" class="collapse">
+    <form action="" method="POST">
+        <h2>Add New degree for this student</h2>
+     {% csrf_token %}
+     {{ formregister.as_p }}
+
+    <button type="submit" class="btn btn-outline-dark"> Add </button>
+        <span class="badge badge-success">{{ msg }}</span>
+    </form>
+    </div>
+</div>
+{% endblock %}

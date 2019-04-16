@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Student</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}
+Students List
+{% endblock %}
+{% block content %}
 
-<h1>List of student {{ ssd }} </h1>
-<table>
+<div class="jumbotron">
+<h1>List of students </h1>
+</div>
+<table class="table table-dark table-hover">
     <thead>
         <th>ID</th>
         <th>Fname</th>
@@ -28,5 +28,6 @@
     </tbody>
 
 </table>
-</body>
-</html>
+
+{% endblock %}
+

@@ -13,5 +13,3 @@ class Student(models.Model):
 class Degree(models.Model):
     student_id=models.ForeignKey(Student , on_delete=models.CASCADE)
     student_degree = models.IntegerField(default=0)
-    #def __str__(self):
-     #   return self.student_id
