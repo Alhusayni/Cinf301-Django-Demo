@@ -36,12 +36,12 @@ Now you will see your work is running
 ### Accessing admin page:
 
 
-First you should create table by using this command :
+First you should create tables by using this command :
 ```
 python manage.py migrate
 ```
 
-then creatue super user to accses admin page run this command:
+then create superuser to access admin page run this command:
 ```
 python manage.py creatersuperuser 
 ```
@@ -49,7 +49,7 @@ python manage.py creatersuperuser
 ### Creating starting app:
 
 
-To create starting app you should write this command in you working directory:
+To create a starting app, you should write this command in your working directory:
 ```
 python manage.py startapp <appname>
 ```
