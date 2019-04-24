@@ -43,7 +43,7 @@ python manage.py migrate
 
 then create superuser to access admin page run this command:
 ```
-python manage.py creatersuperuser 
+python manage.py createsuperuser 
 ```
 
 ### Creating starting app:
